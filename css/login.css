@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+	background-size: 100% 110%;
+}
+
+
+.flex {
+    display: flex;
+}
+
+main {
+    height: 93vh;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.login-form {
+    border:10px solid #fff;
+    background:#4facff;
+    border-radius:50px;
+    box-shadow:10px 0px 10px #000;
+    box-sizing:border-box;
+    padding-top:15px;
+    padding-bottom:10%;
+    text-align:center;
+    height: 200px;
+    width: 500px;
+}
+
+.login-form h3 {
+    text-align:middle;
+    color:#fff;
+}
+
+.login-form input[type="submit"] {
+    height:30px;
+    width:100px;
+    background:#fff;
+    border:1px solid #f2f2f2;
+    border-radius:20px;
+    color: slategrey;
+    text-transform:uppercase;
+    font-family: 'Ubuntu', sans-serif;
+    cursor:pointer;
+}
+
+.login-text {
+    max-width:400px;
+    width: 60%;
+    line-height:3em;
+    font-family: 'Ubuntu', sans-serif;
+    margin:1em 2em;
+    border-radius:5px;
+    border:2px solid #f2f2f2;
+    outline:none;
+    padding-left:10px;
+}
+
+.login {
+    margin:0 auto;
+    max-width:500px;
+}

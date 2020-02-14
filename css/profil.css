@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    justify-content: center;
+    align-items: center;
+    height: 93vh;
+
+}
+.profil{
+    background-color: thistle;
+    width: 70%;
+    height: 50%;
+    justify-content: center;
+    border:4px solid rgb(0, 0, 0);
+    border-radius:50px;
+
+}
+
+.left {
+    background-color: black;
+    width: 40%;
+    height: 100%;
+    border-radius:45px;
+
+}
+
+.right {
+    width: 60%;
+    height: 100%;
+    text-align: center;
+}
+
+.right ul li {
+    list-style: none;
+}
+
+.right>ul {
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+    height: 50%;
+}
+
+#login-button {
+    background:rgb(139, 139, 139);
+    width: 90%;
+    /* border:1px solid #f2f2f2; */
+    border-radius:20px;
+    color: rgb(255, 255, 255);
+    text-transform:uppercase;
+    font-family: 'Ubuntu', sans-serif;
+    cursor:pointer;
+    justify-content: center;
+    height: 15%;
+    align-items: center;
+    margin: 5%;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
