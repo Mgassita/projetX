@@ -33,6 +33,12 @@
                     </li>
                 </ul>
                 <li id="login-button" class="flex"><a href="#">Send message</a></li>
+                <form action="./controllers/profilChek.php" method="POST">
+                    <p>Afficher ou masquer les informations de l'index</p>
+                    <input type="checkbox" name="text" value="checked">
+                    <br>
+                    <input type="submit" value="valider" class="login-button">
+                </form>
             </div>
         </div>
     </main>
