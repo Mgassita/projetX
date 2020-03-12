@@ -13,24 +13,39 @@ body {
     padding: 0;
     height: 100vh;
     background-color: #434343;
-    background-image:linear-gradient(#434343, #282828);
+    background-image:linear-gradient(#282828, #434343);
+}
+
+main {
+    justify-content: center;
+    height: 80vh;
+    align-items: center;
 }
 
 .flex {
     display: flex;
 }
 
-main {
-    flex-direction: column;
-    align-items: center;
+table {
+    border-collapse: collapse;
+}
+th {
+    background: thistle;
 }
 
-.title {
-    margin: 80px;
+th, td {
+    border: 1px solid rgb(0, 0, 0);
+    padding: 8px;
 }
 
-.home-log {
-    flex-direction: column;
-    align-items: center;
+tr:nth-child(even) {
+    background: #139bb3;
 }
 
+tr:hover {
+    background: rgb(143, 143, 143);
+}
+
+tbody {
+    background-color: rgba(143, 143, 143, 0.788);
+}

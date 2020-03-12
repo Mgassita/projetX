@@ -10,11 +10,30 @@
 
 <body>
       <?php include_once 'templates/header.php' ?>
-      <?php if (isset($_SESSION['text']) == 'checked'):   ?>      
-      <main>
-            <div id="txtDesc"><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione qui sed voluptates aut, quidem necessitatibus odio accusantium quibusdam! Eius fuga aperiam porro! Ad rem porro error consectetur molestiae, blanditiis ipsam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, earum reprehenderit ex, ab aut fugiat cum adipisci consequuntur repellat voluptas ipsum vero tenetur voluptatibus. Sed possimus ad nihil maiores blanditiis!</p></div>
+      <main class="flex">
+            <?php if (!isset($_SESSION['pseudo'])) : ?>
+                  <div class="title">
+                        <h1>Bienvenu</h1>
+                  </div>
+                  <div>
+                        <p>Merci de bien vouloir vous connecter!</p>
+                  </div>
+            <?php else : ?>
+                  <div class="flex home-log">
+                        <h1>Bienvenu, <?= $_SESSION['pseudo'] ?> !</h1>
+                        <?php if ($_SESSION['preferences']['image'] == 'on') : ?>
+                              <div>
+                                    <img src="img/all.jpg" alt="">
+                              </div>
+                        <?php endif ?>
+                        <?php if ($_SESSION['preferences']['text'] == 'on') : ?>
+                              <div>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem officia perferendis illum, porro sapiente quo labore eos ab, repudiandae quae molestias obcaecati, praesentium delectus et? Excepturi nobis recusandae beatae. Ullam.</p>
+                              </div>
+                        <?php endif ?>
+                  </div>
+            <?php endif ?>
       </main>
-      <?php endif ?>
       <footer>
 
       </footer>

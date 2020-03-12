@@ -33,12 +33,24 @@
                     </li>
                 </ul>
                 <li id="login-button" class="flex"><a href="#">Send message</a></li>
-                <form action="./controllers/profilChek.php" method="POST">
-                    <p>Afficher ou masquer les informations de l'index</p>
-                    <input type="checkbox" name="text" value="checked">
-                    <br>
-                    <input type="submit" value="valider" class="login-button">
-                </form>
+                <br>
+                <form action="controllers/profilChek.php" method="POST">
+            <div>
+                <p>Afficher le texte : </p>
+                <input type="radio" name="text" value="on" <?= ($_SESSION['preferences']['text'] == 'on') ? 'checked' : '' ?>>
+                <label for="text">Oui</label><br>
+                <input type="radio" name="text" value="off" <?= ($_SESSION['preferences']['text'] == 'off') ? 'checked' : '' ?>>
+                <label for="text">Non</label><br>
+            </div>
+            <div>
+                <p>Afficher l'image : </p>
+                <input type="radio" name="image" value="on" <?= ($_SESSION['preferences']['image'] == 'on') ? 'checked' : '' ?>>
+                <label for="image">Oui</label><br>
+                <input type="radio" name="image" value="off" <?= ($_SESSION['preferences']['image'] == 'off') ? 'checked' : '' ?>>
+                <label for="image">Non</label><br>
+            </div>
+            <input type="submit" value="Ok">
+        </form>
             </div>
         </div>
     </main>

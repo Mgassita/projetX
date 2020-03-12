@@ -5,9 +5,11 @@
 
 body {
     font-family: 'Ubuntu', sans-serif;
-	background-size: 100% 110%;
+    background-size: 100% 110%;
+    height: 100vh;
+    background-color: #434343;
+    background-image:linear-gradient(#434343, #282828);
 }
-
 
 .flex {
     display: flex;
@@ -19,54 +21,126 @@ main {
     align-items: center;
 }
 
-form {
-    flex-direction: column;
-    justify-content: space-evenly;
+.hide {
+    display: none;
 }
 
-.login-form {
-    border:10px solid #fff;
-    background:#4facff;
-    border-radius:50px;
-    box-shadow:10px 0px 10px #000;
-    box-sizing:border-box;
-    padding-top:15px;
-    padding-bottom:10%;
-    text-align:center;
-    height: 200px;
-    width: 500px;
-}
 
-.login-form h3 {
-    text-align:middle;
-    color:#fff;
-}
 
-.login-form input[type="submit"] {
-    height:30px;
-    width:100px;
-    background:#fff;
-    border:1px solid #f2f2f2;
-    border-radius:20px;
-    color: slategrey;
-    text-transform:uppercase;
-    font-family: 'Ubuntu', sans-serif;
-    cursor:pointer;
-}
 
-.login-text {
-    max-width:400px;
-    width: 60%;
-    line-height:3em;
-    font-family: 'Ubuntu', sans-serif;
-    margin:1em 2em;
-    border-radius:5px;
-    border:2px solid #f2f2f2;
-    outline:none;
-    padding-left:10px;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* {
+box-sizing: border-box;
+font-family: -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen, ubuntu, cantarell, "fira sans", "droid sans", "helvetica neue", Arial, sans-serif;
+font-size: 16px;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
 }
 
 .login {
-    margin:0 auto;
-    max-width:500px;
+    width: 400px;
+    background-color: thistle;
+    box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
+    margin: 100px auto;
 }
+
+.login h1 {
+    text-align: center;
+    color: #5b6574;
+    font-size: 24px;
+    padding: 20px 0 20px 0;
+    border-bottom: 1px solid #dee0e4;
+}
+
+.login form {
+    /* display: flex; */
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.login form label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+
+    width: 50px;
+    height: 50px;
+    background-color: #3274d6;
+    color: #ffffff;
+}
+
+.login form input[type="password"], .login form input[type="text"] {
+    width: 90%;
+    height: 50px;
+    border: 1px solid #dee0e4;
+    margin-bottom: 20px;
+    padding: 0 15px;
+    margin-left: 5%;
+}
+
+.login form input[type="submit"] {
+    width: 100%;
+    padding: 15px;
+   margin-top: 20px;
+    background-color: #3274d6;
+    border: 0;
+    cursor: pointer;
+    font-weight: bold;
+    color: #ffffff;
+    transition: background-color 0.2s;
+}
+
+.login form input[type="submit"]:hover {
+  background-color: #2868c7;
+    transition: background-color 0.2s;
+} 
+
+.textChange {
+    text-align: center;
+}
+
+.label {
+    margin-top: 18px;
+}
+
+
+
+
+
+

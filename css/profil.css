@@ -1,6 +1,11 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen, ubuntu, cantarell, "fira sans", "droid sans", "helvetica neue", Arial, sans-serif;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 main {
@@ -11,8 +16,8 @@ main {
 }
 .profil{
     background-color: thistle;
-    width: 80%;
-    height: 65%;
+    width: 70%;
+    height: 50%;
     justify-content: center;
     border:4px solid rgb(0, 0, 0);
     border-radius:50px;
@@ -62,4 +67,8 @@ main {
 a {
     color: white;
     text-decoration: none;
+}
+
+form {
+    color: white;
 }

@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    background-color: #434343;
+    background-image:linear-gradient(#434343, #282828);
+  }
+
+.flex {
+    display: flex;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    flex-direction: column;
+    align-items: center;
+}
+
+main>div {
+    width: 60%;
+}
+
+main > div:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+img {
+    height: 200px;
+}
+
+.img {
+    width: 40%;
+}
+
+.character-name {
+    width: 20%;
+}
+
+.description {
+    width: 40%;
+}
+
+h1 {
+    text-align: center;
+
+}
+
