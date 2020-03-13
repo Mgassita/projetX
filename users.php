@@ -26,8 +26,8 @@
             <tbody>
                 <?php while ($r = $q->fetch()) : ?>
                     <tr>
-                        <td><?php echo ($r['id']) ?></td>
-                        <td><?php echo ($r['name']) ?></td>
+                        <td><?php echo (ucfirst($r['id'])) ?></td>
+                        <td><?php echo (ucfirst($r['name'])) ?></td>
                         <td><?php echo ($r['description']); ?></td>
                         <!-- <td><input type="radio" name="delete" value="<?= $r['id'] ?>"></td> -->
                         <td class="action">

@@ -1,9 +1,7 @@
 <?php 
-
-session_start();
-$name = strtolower($_POST['nom']);
+$name = strtolower($_POST['pseudo']);
 $password =md5($_POST['password']);
-$description = $_POST['desc'];
+// $description = $_POST['desc'];
 
 $host = 'localhost';
 $dbname = 'Mythic';
@@ -11,17 +9,24 @@ $username = 'root';
 
 
 $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, '0000');
-$sql = $bdd->prepare("SELECT * FROM users");
+$sql = $pdo->prepare("SELECT * FROM users");
 $sql->bindParam(':name', $name);
 $sql->bindParam(':password', $password);
 $sql->bindParam(':description', $description);
 
-$q->execute();
+$sql->execute();
+$users=$sql->fetchall(PDO::FETCH_ASSOC);
 
-if (isset($_POST['id'])) {
-    $name = strtolower($_POST['nom']);
-    $password =md5($_POST['password']);
-    $description = $_POST['desc'];
+foreach ($users as $user) {
+
+    if ($name == $user['name'] && $user['password'] == $password){
+        session_start();
+        $_SESSION['id'] = $user['id'];
+        $_SESSION['pseudo'] = ucfirst($user['name']);
+        $_SESSION['descCheck'] = $user['description'];
+        // $_SESSION['imgCheck'] = $user['indexImg'];
+        header('Location: /'); die;
+    }
 }
 
-header('Location: /');
+// header('Location: /login.php');
