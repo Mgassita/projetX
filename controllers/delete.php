@@ -14,3 +14,13 @@
 //     die;
 // }
 // header('Location: /users.php');die;
+
+
+$id = $_POST['id'];
+
+$bdd = new PDO('mysql:host=localhost;dbname=Mythic;charset=utf8', 'root', '0000');
+$sth = $bdd->prepare("DELETE FROM users WHERE id=:id");
+$sth->bindParam(':id', $id);
+$sth->execute();
+
+header('Location: /users.php');

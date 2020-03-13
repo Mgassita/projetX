@@ -49,3 +49,23 @@ tr:hover {
 tbody {
     background-color: rgba(143, 143, 143, 0.788);
 }
+
+.action {
+    justify-content: center;
+    align-items: center;
+}
+
+.action input {
+    height: 16px;
+    width: 23px;
+}
+
+td {
+    height: 25px;
+}
+
+form {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}

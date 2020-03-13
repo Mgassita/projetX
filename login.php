@@ -37,7 +37,7 @@
                     <h3 class="textChange">Password</h3>
                     <input class="inscription-text" name="password" type="password" placeholder="Pierre"><br>
                     <h3 class="textChange">Description</h3>
-                    <input class="inscription-text" name="desc" type="text" placeholder="p.delahousse">
+                    <textarea name="desc" id="" cols="30" rows="10"></textarea>
                     <input type="submit" value="Inscription" class="login-button">
                     <br>
                     <br>

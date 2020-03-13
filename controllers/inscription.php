@@ -15,12 +15,12 @@ $username = 'root';
 
 
 $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, '0000');
-$sql = "INSERT INTO users (name, password, description) VALUES ('$name', '$password', '$description')";
+$sql = $bdd->prepare("INSERT INTO users (name, password, description) VALUES (:name, :password, :description)");
+$sql->bindParam(':name', $name);
+$sql->bindParam(':password', $password);
+$sql->bindParam(':description', $description);
 
-$q = $pdo->query($sql); 
-// $sql->bindParam(':name', $name);
-// $sql->bindParam(':password', $password);
-// $sql->bindParam(':description', $description);
+$q->execute();
 
 header('Location: /')
 ?>
